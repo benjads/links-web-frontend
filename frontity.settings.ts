@@ -5,13 +5,13 @@ const settings: Settings = {
   "state": {
     "frontity": {
       "url": "https://test.frontity.org",
-      "title": "Test Frontity Blog",
-      "description": "WordPress installation for Frontity development"
+      "title": "LINKS Club",
+      "description": "Help each other help the world."
     }
   },
   "packages": [
     {
-      "name": "@frontity/mars-theme",
+      "name": "links-editorial",
       "state": {
         "theme": {
           "menu": [
@@ -36,10 +36,6 @@ const settings: Settings = {
               "/about-us/"
             ]
           ],
-          "featured": {
-            "showOnList": false,
-            "showOnPost": false
-          }
         }
       }
     },
