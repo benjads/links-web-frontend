@@ -1,11 +1,19 @@
 import React from 'react';
 import {
-    Global, css, connect, styled, Head,
+    Global, css, connect, Head,
 } from 'frontity';
+import Switch from '@frontity/components/switch';
+import bootstrapCss from '../main.css';
 import Title from './title';
+import Loading from './loading';
+import PageError from './page-error';
+import PageHome from './pages/home';
+
+const BootstrapStyles = () => (
+    <Global styles={css(bootstrapCss)} />
+);
 
 const Theme = ({ state }) => {
-    // Get information about the current URL.
     const data = state.source.get(state.router.link);
 
     return (
@@ -16,7 +24,14 @@ const Theme = ({ state }) => {
                 <html lang="en" />
             </Head>
 
+            <BootstrapStyles />
             <Global styles={globalStyles} />
+
+            <Switch>
+                <Loading when={data.isFetching} />
+                <PageError when={data.isError} />
+                <PageHome />
+            </Switch>
         </>
     );
 };

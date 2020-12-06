@@ -7,6 +7,7 @@
     "@frontity/components": "^1.6.0",
     "@frontity/html2react": "^1.5.0",
     "frontity": "^1.13.0",
-    "react": "^16.8.3"
+    "react": "^16.8.3",
+    "react-bootstrap": "^1.4.0"
   }
 }

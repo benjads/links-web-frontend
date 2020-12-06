@@ -5,3 +5,5 @@ package-lock.json
 .idea
 /build
 npm-debug.log*
+
+.vercel
