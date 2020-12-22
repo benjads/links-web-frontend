@@ -11,10 +11,17 @@ const editorialTheme = {
     state: {
         theme: {
             autoPrefetch: 'in-view',
+            isMenuOpen: false,
         },
     },
     actions: {
         theme: {
+            openMenu: ({ state }) => {
+                state.theme.isMenuOpen = true;
+            },
+            closeMenu: ({ state }) => {
+                state.theme.isMenuOpen = false;
+            },
         },
     },
     libraries: {

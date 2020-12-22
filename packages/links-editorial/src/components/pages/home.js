@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'frontity';
 import Section from '../section';
 import UpcomingEvents from '../upcoming-events/upcoming-events';
+import TopNav from '../top-nav';
 
 const clubDesc = 'We develop meaningful connections between our club members '
     + 'and within our communities through '
@@ -11,7 +12,8 @@ const lipsum = 'As aut explaborit perfera tisciur autem harume cusciendic tempor
     + 'Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.';
 
 const PageHome = () => (
-    <div>
+    <>
+        <TopNav />
         <Section
             title="We are LINKS"
             desc={clubDesc}
@@ -27,7 +29,7 @@ const PageHome = () => (
         >
             <UpcomingEvents />
         </Section>
-    </div>
+    </>
 );
 
 export default connect(PageHome);

@@ -32,6 +32,8 @@
         "react/jsx-indent": ["error", 4],
         "react/jsx-indent-props": ["error", 4],
         "no-use-before-define": "off",
-        "react/prop-types": "off"
+        "react/prop-types": "off",
+        "import/no-extraneous-dependencies": "off",
+        "no-param-reassign": "off"
     }
 }
