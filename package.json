@@ -21,7 +21,9 @@
     "@types/react": "^17.0.0",
     "frontity": "^1.13.0",
     "links-editorial": "./packages/links-editorial",
-    "react": "^16.14.0"
+    "react": "^16.14.0",
+    "react-aria-offcanvas": "^1.4.2",
+    "react-bootstrap": "^1.4.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.9.0",
