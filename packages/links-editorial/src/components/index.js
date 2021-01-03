@@ -8,6 +8,8 @@ import Title from './title';
 import Loading from './loading';
 import PageError from './page-error';
 import PageHome from './pages/home';
+import PageOurStory from './pages/our-story';
+import { fontHeadings, fontSansSerif } from '../main-vars';
 
 const BootstrapStyles = () => (
     <Global styles={css(bootstrapCss)} />
@@ -29,8 +31,9 @@ const Theme = ({ state }) => {
 
             <Switch>
                 <Loading when={data.isFetching} />
+                <PageHome when={state.router.link === '/'} />
+                <PageOurStory when={state.router.link === '/our-story/'} />
                 <PageError when={data.isError} />
-                <PageHome />
             </Switch>
         </>
     );
@@ -39,5 +42,11 @@ const Theme = ({ state }) => {
 export default connect(Theme);
 
 const globalStyles = css`
+    .font-ss {
+        font-family: ${fontSansSerif};
+    }
   
+    .font-heading {
+        font-family: ${fontHeadings};
+    }
 `;

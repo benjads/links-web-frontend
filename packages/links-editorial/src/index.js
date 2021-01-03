@@ -12,6 +12,7 @@ const editorialTheme = {
         theme: {
             autoPrefetch: 'in-view',
             isMenuOpen: false,
+            isNavVisible: false,
         },
     },
     actions: {
@@ -21,6 +22,13 @@ const editorialTheme = {
             },
             closeMenu: ({ state }) => {
                 state.theme.isMenuOpen = false;
+            },
+            toggleMenu: ({ state }) => {
+                state.theme.isMenuOpen = !state.theme.isMenuOpen;
+            },
+            updateNav: ({ state }) => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                state.theme.isNavVisible = scrollTop > 0;
             },
         },
     },

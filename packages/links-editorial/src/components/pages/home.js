@@ -2,7 +2,8 @@ import React from 'react';
 import { connect } from 'frontity';
 import Section from '../section';
 import UpcomingEvents from '../upcoming-events/upcoming-events';
-import TopNav from '../top-nav';
+import TopNav from '../navigation/top-nav';
+import Hero from '../hero';
 
 const clubDesc = 'We develop meaningful connections between our club members '
     + 'and within our communities through '
@@ -13,7 +14,11 @@ const lipsum = 'As aut explaborit perfera tisciur autem harume cusciendic tempor
 
 const PageHome = () => (
     <>
-        <TopNav />
+        <TopNav hide />
+        <Hero
+            title="LINKS"
+            subtitle="Leadership. Networking Kindness. Service."
+        />
         <Section
             title="We are LINKS"
             desc={clubDesc}
