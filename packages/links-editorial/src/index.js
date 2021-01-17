@@ -13,6 +13,30 @@ const editorialTheme = {
             autoPrefetch: 'in-view',
             isMenuOpen: false,
             isNavVisible: false,
+            projects: [
+                {
+                    name: 'Greeting Cards for Seniors',
+                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
+                    url: '/card-making',
+                    img: 'https://www.fillmurray.com/600/600',
+                    featured: true,
+                },
+                {
+                    name: 'Food Drive',
+                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
+                    url: '/food-drive',
+                    img: 'https://www.fillmurray.com/600/600',
+                    featured: true,
+                },
+                {
+                    name: 'Masks for Essential Workers',
+                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
+                    url: '/masks',
+                    img: 'https://www.fillmurray.com/600/600',
+                    featured: true,
+                },
+            ],
+            featuredProjectIndex: 0,
         },
     },
     actions: {
@@ -29,6 +53,23 @@ const editorialTheme = {
             updateNav: ({ state }) => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 state.theme.isNavVisible = scrollTop > 0;
+            },
+            setFeaturedProjectIndex: ({ state }) => (index) => {
+                state.theme.featuredProjectIndex = index;
+            },
+            incrementFeaturedProjectIndex: ({ state }) => {
+                state.theme.featuredProjectIndex += 1;
+
+                if (state.theme.featuredProjectIndex >= state.theme.projects.length) {
+                    state.theme.featuredProjectIndex = 0;
+                }
+            },
+            decrementFeaturedProjectIndex: ({ state }) => {
+                state.theme.featuredProjectIndex -= 1;
+
+                if (state.theme.featuredProjectIndex < 0) {
+                    state.theme.featuredProjectIndex = state.theme.projects.length - 1;
+                }
             },
         },
     },

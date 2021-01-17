@@ -29,7 +29,7 @@ const OffCanvasBrand = styled(NavbarBrand)`
     font-family: ${fontHeadings};
 `;
 
-const StyledLink = styled(Nav.Link)`
+const StyledLink = styled.p`
     color: #fff !important;
     font-size: 2rem;
     font-family: ${fontHeadings};

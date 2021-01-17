@@ -1,10 +1,11 @@
 import React from 'react';
 import { styled } from 'frontity';
+import EditorialLink from './link';
 
 const UnderlineButton = ({ dest, title }) => (
-    <a href={dest}>
+    <EditorialLink link={dest}>
         <CTAText>{title}</CTAText>
-    </a>
+    </EditorialLink>
 );
 
 const CTAText = styled.p`

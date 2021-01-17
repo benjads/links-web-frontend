@@ -6,7 +6,7 @@ import Switch from '@frontity/components/switch';
 import bootstrapCss from '../main.css';
 import Title from './title';
 import Loading from './loading';
-import PageError from './page-error';
+import PageError from './pages/page-error';
 import PageHome from './pages/home';
 import PageOurStory from './pages/our-story';
 import { fontHeadings, fontSansSerif } from '../main-vars';
@@ -17,6 +17,9 @@ const BootstrapStyles = () => (
 
 const Theme = ({ state }) => {
     const data = state.source.get(state.router.link);
+
+    // eslint-disable-next-line no-console
+    console.log('Theme rendering...');
 
     return (
         <>
