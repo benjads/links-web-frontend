@@ -26,7 +26,7 @@ const PageHome = () => (
         <Section
             title="We are LINKS"
             desc={clubDesc}
-            ctaUrl="#"
+            ctaUrl="/our-story"
             ctaText="Discover Our Story"
         />
         <Section

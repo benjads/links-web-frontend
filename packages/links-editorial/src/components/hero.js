@@ -6,7 +6,7 @@ const Hero = ({ title, subtitle, heroHeight }) => (
     <HeroJumbotron fluid heroheight={heroHeight}>
         <Container>
             <h1 className="display-1">{title}</h1>
-            <p>{subtitle}</p>
+            <h3>{subtitle}</h3>
         </Container>
     </HeroJumbotron>
 );
