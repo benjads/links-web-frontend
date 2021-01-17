@@ -14,6 +14,9 @@ const OffCanvasNav = () => (
             <EditorialLink link="/our-story/">
                 <StyledLink>Our Story</StyledLink>
             </EditorialLink>
+            <EditorialLink link="/projects/">
+                <StyledLink>Our Projects</StyledLink>
+            </EditorialLink>
         </Nav>
     </OffCanvasNavbar>
 );

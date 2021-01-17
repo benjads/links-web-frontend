@@ -20,7 +20,7 @@ const FeaturedProjects = ({ state, actions }) => {
                         onSelect={actions.theme.setFeaturedProjectIndex}
                         controls={false}
                     >
-                        {state.theme.projects.map((project) => (
+                        {state.theme.featuredProjects.map((project) => (
                             <Carousel.Item key={project.url}>
                                 <img className="d-block w-100" src={project.img} alt={project.name} />
                             </Carousel.Item>

@@ -12,6 +12,7 @@ const CTAText = styled.p`
     border-bottom: 1px black solid;
     text-transform: uppercase;
     max-width: fit-content;
+    font-size: 0.8rem;
 `;
 
 export default UnderlineButton;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from 'frontity';
+import { connect, styled } from 'frontity';
 import UnderlineButton from '../underline-button';
 
 const EventSnippet = ({ event }) => (
@@ -19,4 +19,4 @@ const PosterImg = styled.img`
     padding-bottom: 1.5rem;
 `;
 
-export default EventSnippet;
+export default connect(EventSnippet);

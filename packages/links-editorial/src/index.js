@@ -35,7 +35,31 @@ const editorialTheme = {
                     img: 'https://www.fillmurray.com/600/600',
                     featured: true,
                 },
+                {
+                    name: 'Coat and Sock Drive',
+                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
+                    url: '/coat-drive',
+                    img: 'https://www.fillmurray.com/600/600',
+                    featured: false,
+                },
+                {
+                    name: 'Virtual Meetings with Seniors',
+                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
+                    url: '/virtual-meetings',
+                    img: 'https://www.fillmurray.com/600/600',
+                    featured: false,
+                },
+                {
+                    name: 'IT Support for Teachers',
+                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
+                    url: '/it-for-teachers',
+                    img: 'https://www.fillmurray.com/600/600',
+                    featured: false,
+                },
             ],
+            featuredProjects: ({ state }) => state.theme.projects.filter(
+                (project) => project.featured,
+            ),
             featuredProjectIndex: 0,
         },
     },
@@ -60,7 +84,7 @@ const editorialTheme = {
             incrementFeaturedProjectIndex: ({ state }) => {
                 state.theme.featuredProjectIndex += 1;
 
-                if (state.theme.featuredProjectIndex >= state.theme.projects.length) {
+                if (state.theme.featuredProjectIndex >= state.theme.featuredProjects.length) {
                     state.theme.featuredProjectIndex = 0;
                 }
             },
@@ -68,7 +92,7 @@ const editorialTheme = {
                 state.theme.featuredProjectIndex -= 1;
 
                 if (state.theme.featuredProjectIndex < 0) {
-                    state.theme.featuredProjectIndex = state.theme.projects.length - 1;
+                    state.theme.featuredProjectIndex = state.theme.featuredProjects.length - 1;
                 }
             },
         },
