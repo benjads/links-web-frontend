@@ -3,6 +3,7 @@ import iframe from '@frontity/html2react/processors/iframe';
 import link from '@frontity/html2react/processors/link';
 import Theme from './components';
 
+// noinspection JSUnusedGlobalSymbols
 const editorialTheme = {
     name: 'links-editorial',
     roots: {
@@ -65,6 +66,26 @@ const editorialTheme = {
     },
     actions: {
         theme: {
+            init: ({ libraries }) => {
+                libraries.source.handlers.push({
+                    pattern: '/',
+                    func: ({ state }) => {
+                        state.source.data['/'].isHome = true;
+                    },
+                });
+                libraries.source.handlers.push({
+                    pattern: '/our-story/',
+                    func: ({ state }) => {
+                        state.source.data['/our-story/'].isOurStory = true;
+                    },
+                });
+                libraries.source.handlers.push({
+                    pattern: '/projects/',
+                    func: ({ state }) => {
+                        state.source.data['/projects/'].isProjects = true;
+                    },
+                });
+            },
             openMenu: ({ state }) => {
                 state.theme.isMenuOpen = true;
             },

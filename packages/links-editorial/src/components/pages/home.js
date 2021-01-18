@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'frontity';
+import { colorSecondaryTeak, colorSecondaryWestar } from '../../main-vars';
 import Section from '../section';
 import UpcomingEvents from '../upcoming-events/upcoming-events';
 import TopNav from '../navigation/top-nav';
 import Hero from '../hero';
 import Footer from '../footer';
-import { colorSecondaryTeak, colorSecondaryWestar } from '../../main-vars';
 import FeaturedProjects from '../featured-projects';
 import JoinUsBreak from '../join-us-break';
 

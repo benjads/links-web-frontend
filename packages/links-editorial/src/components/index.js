@@ -32,9 +32,9 @@ const Theme = ({ state }) => {
 
             <Switch>
                 <Loading when={data.isFetching} />
-                <PageHome when={state.router.link === '/'} />
-                <PageOurStory when={state.router.link === '/our-story/'} />
-                <PageProjects when={state.router.link === '/projects/'} />
+                <PageHome when={data.isHome} />
+                <PageOurStory when={data.isOurStory} />
+                <PageProjects when={data.isProjects} />
                 <PageError when={data.isError} />
             </Switch>
         </>

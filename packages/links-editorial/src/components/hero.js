@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from 'frontity';
+import { connect, styled } from 'frontity';
 import { Jumbotron, Container } from 'react-bootstrap';
 
 const Hero = ({ title, subtitle, heroHeight }) => (
@@ -23,4 +23,4 @@ const HeroJumbotron = styled(Jumbotron)`
     text-align: center;
 `;
 
-export default Hero;
+export default connect(Hero);

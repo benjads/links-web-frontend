@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from 'frontity';
+import { connect, styled } from 'frontity';
 import { Container, Row, Col } from 'react-bootstrap';
 import UnderlineButton from './underline-button';
 
@@ -31,4 +31,4 @@ const HeadingRow = styled(Row)`
     padding-bottom: ${(props) => (props.haschildren === 'true' ? '3rem' : '0')}
 `;
 
-export default Section;
+export default connect(Section);
