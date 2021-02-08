@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect, styled } from 'frontity';
 import { Nav, Navbar, NavbarBrand } from 'react-bootstrap';
-import { fontHeadings } from '../../main-vars';
+import { fontHeadings, fontSansSerif } from '../../main-vars';
 import EditorialLink from '../link';
 
 const OffCanvasNav = () => (
@@ -24,6 +24,8 @@ const OffCanvasNav = () => (
 const OffCanvasNavbar = styled(Navbar)`
     display: table-cell;
     vertical-align: middle;
+    text-align: left;
+    padding-left: 3rem;
 `;
 
 const OffCanvasBrand = styled(NavbarBrand)`
@@ -35,7 +37,7 @@ const OffCanvasBrand = styled(NavbarBrand)`
 const StyledLink = styled.p`
     color: #fff !important;
     font-size: 2rem;
-    font-family: ${fontHeadings};
+    font-family: ${fontSansSerif};
 `;
 
 export default connect(OffCanvasNav);

@@ -41,7 +41,12 @@ const BreakSection = styled.section`
 const RoundedInput = styled(Form.Control)`
     border-radius: 8%/60%;
     height: 3rem;
+    color: black;
     padding: 0 1.5rem 0 1.5rem;
+  
+    :focus::placeholder {
+      color: transparent;
+    }
 `;
 
 const SubmitButton = styled(Button)`

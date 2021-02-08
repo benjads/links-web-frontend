@@ -12,6 +12,7 @@ const EditorialLink = ({ children, ...props }) => {
     };
 
     return (
+        // eslint-disable-next-line react/jsx-props-no-spreading
         <Link {...props} onClick={onClick}>
             {children}
         </Link>

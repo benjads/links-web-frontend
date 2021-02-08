@@ -7,11 +7,11 @@ import {
 } from 'frontity';
 import OffCanvas from 'react-aria-offcanvas';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import OffCanvasNav from './offcanvas-nav';
 import EditorialLink from '../link';
 
-const TopNav = ({ hide, state, actions }) => {
+const TopNav = ({ hide, semiTrans, state, actions }) => {
     if (hide) {
         useEffect(() => {
             window.addEventListener('scroll', actions.theme.updateNav);
@@ -41,7 +41,7 @@ const TopNav = ({ hide, state, actions }) => {
                     className="navbar-toggler"
                     onClick={actions.theme.toggleMenu}
                 >
-                    <FontAwesomeIcon icon={faBars} />
+                    <FontAwesomeIcon icon={state.theme.isMenuOpen ? faTimes : faBars} />
                 </NavButton>
                 <OffCanvas
                     isOpen={state.theme.isMenuOpen}

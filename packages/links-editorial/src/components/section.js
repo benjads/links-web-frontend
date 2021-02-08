@@ -10,7 +10,7 @@ const Section = ({
         <Container>
             <HeadingRow className="align-items-center" haschildren={children ? 'true' : 'false'}>
                 <Col lg={5}>
-                    <h1>{title}</h1>
+                    <h2>{title}</h2>
                     <UnderlineButton dest={ctaUrl} title={ctaText} />
                 </Col>
                 <Col lg={7}>

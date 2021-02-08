@@ -80,7 +80,7 @@ const SocialIcons = styled.ul`
     }
   
     li a span svg {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 `;
 

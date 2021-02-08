@@ -14,52 +14,9 @@ const editorialTheme = {
             autoPrefetch: 'in-view',
             isMenuOpen: false,
             isNavVisible: false,
-            projects: [
-                {
-                    name: 'Greeting Cards for Seniors',
-                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
-                    url: '/card-making',
-                    img: 'https://www.fillmurray.com/600/600',
-                    featured: true,
-                },
-                {
-                    name: 'Food Drive',
-                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
-                    url: '/food-drive',
-                    img: 'https://www.fillmurray.com/600/600',
-                    featured: true,
-                },
-                {
-                    name: 'Masks for Essential Workers',
-                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
-                    url: '/masks',
-                    img: 'https://www.fillmurray.com/600/600',
-                    featured: true,
-                },
-                {
-                    name: 'Coat and Sock Drive',
-                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
-                    url: '/coat-drive',
-                    img: 'https://www.fillmurray.com/600/600',
-                    featured: false,
-                },
-                {
-                    name: 'Virtual Meetings with Seniors',
-                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
-                    url: '/virtual-meetings',
-                    img: 'https://www.fillmurray.com/600/600',
-                    featured: false,
-                },
-                {
-                    name: 'IT Support for Teachers',
-                    desc: 'As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod. As aut explaborit perfera tisciur autem harume cusciendic temporio. Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.',
-                    url: '/it-for-teachers',
-                    img: 'https://www.fillmurray.com/600/600',
-                    featured: false,
-                },
-            ],
+            projects: [],
             featuredProjects: ({ state }) => state.theme.projects.filter(
-                (project) => project.featured,
+                (project) => parseInt(project.featured, 10),
             ),
             featuredProjectIndex: 0,
         },
@@ -98,6 +55,9 @@ const editorialTheme = {
             updateNav: ({ state }) => {
                 const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
                 state.theme.isNavVisible = scrollTop > 0;
+            },
+            setProjects: ({ state }) => (projects) => {
+                state.theme.projects = projects;
             },
             setFeaturedProjectIndex: ({ state }) => (index) => {
                 state.theme.featuredProjectIndex = index;

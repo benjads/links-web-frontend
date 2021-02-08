@@ -4,7 +4,7 @@ const settings: Settings = {
     name: 'links-web-frontend',
     state: {
         frontity: {
-            url: 'https://test.frontity.org',
+            url: 'https://dev.wearelinks.org',
             title: 'LINKS Club',
             description: 'Help each other help the world.',
         },
@@ -44,7 +44,14 @@ const settings: Settings = {
             name: '@frontity/wp-source',
             state: {
                 source: {
-                    url: 'https://test.frontity.org',
+                    url: 'https://dev-content.wearelinks.org',
+                    postTypes: [
+                        {
+                            type: 'project',
+                            endpoint: 'project',
+                            archive: '/project',
+                        },
+                    ],
                 },
             },
         },

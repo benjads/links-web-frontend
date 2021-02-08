@@ -6,8 +6,8 @@ import UpcomingEvents from '../upcoming-events/upcoming-events';
 import TopNav from '../navigation/top-nav';
 import Hero from '../hero';
 import Footer from '../footer';
-import FeaturedProjects from '../featured-projects';
 import JoinUsBreak from '../join-us-break';
+import FeaturedProjects from '../projects/featured-projects';
 
 const clubDesc = 'We develop meaningful connections between our club members '
     + 'and within our communities through '

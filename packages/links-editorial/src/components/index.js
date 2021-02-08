@@ -3,6 +3,8 @@ import {
     Global, css, connect, Head,
 } from 'frontity';
 import Switch from '@frontity/components/switch';
+import { config } from '@fortawesome/fontawesome-svg-core';
+import faCss from '@fortawesome/fontawesome-svg-core/styles.css';
 import bootstrapCss from '../main.css';
 import Title from './title';
 import Loading from './loading';
@@ -11,9 +13,15 @@ import PageError from './pages/page-error';
 import PageHome from './pages/home';
 import PageOurStory from './pages/our-story';
 import PageProjects from './pages/projects';
+import ProjectDetail from './pages/project-detail';
 
-const BootstrapStyles = () => (
-    <Global styles={css(bootstrapCss)} />
+config.autoAddCss = false;
+
+const ImportedStyles = () => (
+    <>
+        <Global styles={css(bootstrapCss)} />
+        <Global styles={css(faCss)} />
+    </>
 );
 
 const Theme = ({ state }) => {
@@ -27,7 +35,7 @@ const Theme = ({ state }) => {
                 <html lang="en" />
             </Head>
 
-            <BootstrapStyles />
+            <ImportedStyles />
             <Global styles={globalStyles} />
 
             <Switch>
@@ -35,6 +43,7 @@ const Theme = ({ state }) => {
                 <PageHome when={data.isHome} />
                 <PageOurStory when={data.isOurStory} />
                 <PageProjects when={data.isProjects} />
+                <ProjectDetail when={data.isProject} />
                 <PageError when={data.isError} />
             </Switch>
         </>

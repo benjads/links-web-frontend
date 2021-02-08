@@ -17,6 +17,7 @@ const SnippetDiv = styled.div`
 
 const PosterImg = styled.img`
     padding-bottom: 1.5rem;
+    border-radius: 10%/20%;
 `;
 
 export default connect(EventSnippet);
