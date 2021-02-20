@@ -7,7 +7,7 @@ import JoinUsBreak from '../join-us-break';
 import Footer from '../footer';
 import ProjectList from '../projects/project-list';
 
-const overviewText = 'We’re a group of individuals who are passionate about serving others. With each act of kindess, we can build a better world.';
+const overviewText = 'We’re a group of individuals who are passionate about serving others. With each act of kindness, we can build a better world.';
 
 const PageProjects = () => (
     <>

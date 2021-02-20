@@ -7,17 +7,20 @@ const EventSnippet = ({ event }) => (
         <PosterImg className="img-fluid" src={event.img} alt={event.name} />
         <h5>{event.name}</h5>
         <p>{event.desc}</p>
-        <UnderlineButton dest={event.url} title={event.name} />
+        <UnderlineButton dest={event.url} title="Learn More" />
     </SnippetDiv>
 );
 
 const SnippetDiv = styled.div`
-    padding-bottom: 1rem;
+    padding: 0 1rem 1rem 1rem;
 `;
 
 const PosterImg = styled.img`
     padding-bottom: 1.5rem;
-    border-radius: 10%/20%;
+    border-radius: 20%/20%;
+    width: 20rem;
+    height: 20rem;
+    object-fit: cover;
 `;
 
 export default connect(EventSnippet);

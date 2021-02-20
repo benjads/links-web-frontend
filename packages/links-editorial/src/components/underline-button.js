@@ -1,5 +1,5 @@
 import React from 'react';
-import { styled } from 'frontity';
+import { connect, styled } from 'frontity';
 import EditorialLink from './link';
 
 const UnderlineButton = ({ dest, title }) => (
@@ -15,4 +15,4 @@ const CTAText = styled.p`
     font-size: 0.8rem;
 `;
 
-export default UnderlineButton;
+export default connect(UnderlineButton);

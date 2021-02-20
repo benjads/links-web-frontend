@@ -16,12 +16,13 @@ const clubDesc = 'We develop meaningful connections between our club members '
 const lipsum = 'As aut explaborit perfera tisciur autem harume cusciendic temporio. '
     + 'Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.';
 
+const eventsDesc = 'Explore the good we\'re doing locally and globally and discover our upcoming service, social, and professional development events.';
+
 const PageHome = () => (
     <>
         <TopNav hide />
         <Hero
-            title="LINKS"
-            subtitle="Leadership. Networking Kindness. Service."
+            subtitle="Leadership. Innovation. Networking. Kindness. Service."
         />
         <Section
             title="We are LINKS"
@@ -40,9 +41,9 @@ const PageHome = () => (
         </Section>
         <Section
             title="Upcoming Events"
-            desc={lipsum}
+            desc={eventsDesc}
             ctaUrl="#"
-            ctaText="Discover Our Story"
+            ctaText="View All Events"
             bg={colorSecondaryWestar}
         >
             <UpcomingEvents />

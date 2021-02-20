@@ -5,7 +5,7 @@ import {
 import Switch from '@frontity/components/switch';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import faCss from '@fortawesome/fontawesome-svg-core/styles.css';
-import bootstrapCss from '../main.css';
+import bootstrapCss from '../static/css/main.css';
 import Title from './title';
 import Loading from './loading';
 import { fontHeadings, fontSansSerif } from '../main-vars';

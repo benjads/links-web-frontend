@@ -1,6 +1,9 @@
 import image from '@frontity/html2react/processors/image';
 import iframe from '@frontity/html2react/processors/iframe';
 import link from '@frontity/html2react/processors/link';
+import eventNight from './static/images/event-night.jpg';
+import meeting from './static/images/meeting.jpg';
+import card from './static/images/card.jpg';
 import Theme from './components';
 
 // noinspection JSUnusedGlobalSymbols
@@ -19,6 +22,29 @@ const editorialTheme = {
                 (project) => parseInt(project.featured, 10),
             ),
             featuredProjectIndex: 0,
+            featuredEvents: [
+                {
+                    name: 'Card Making',
+                    desc: 'As aut explaborit perfera tisciur autem harume.',
+                    date: 'December 1',
+                    url: '/card-making',
+                    img: card,
+                },
+                {
+                    name: 'Monthly Meeting',
+                    desc: 'As aut explaborit perfera tisciur autem harume.',
+                    date: 'December 1',
+                    url: '/monthly-meeting',
+                    img: meeting,
+                },
+                {
+                    name: 'Event Night',
+                    desc: 'As aut explaborit perfera tisciur autem harume.',
+                    date: 'December 1',
+                    url: '/event-night',
+                    img: eventNight,
+                },
+            ],
         },
     },
     actions: {

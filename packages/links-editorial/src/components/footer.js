@@ -5,13 +5,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faFacebookSquare, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { colorPrimary } from '../main-vars';
 import EditorialLink from './link';
+import linksWhite from '../static/images/links-club-white.png';
 
 const Footer = () => (
     <StyledFooter>
         <Container>
             <Row>
                 <SpacedCol lg={6}>
-                    <h1 className="display-4">LINKS</h1>
+                    <EditorialLink link="/"><FooterLogo src={linksWhite} alt="LINKS Logo" /></EditorialLink>
                 </SpacedCol>
                 <SpacedCol lg={3}>
                     <ul className="list-unstyled">
@@ -28,10 +29,10 @@ const Footer = () => (
                         <br />
                         123.456.7890
                         <br />
-                        contact@wearelinks.org
+                        <a className="text-white" href="mailto:contact@wearelinks.org">contact@wearelinks.org</a>
                     </p>
                     <SocialIcons>
-                        <SocialIcon icon={faInstagram} dest="#" />
+                        <SocialIcon icon={faInstagram} dest="https://www.instagram.com/wearelinks" />
                     </SocialIcons>
                     <SocialIcons>
                         <SocialIcon icon={faFacebookSquare} dest="#" />
@@ -90,6 +91,10 @@ const SpacedCol = styled(Col)`
       text-align: center;
     }
   
+`;
+
+const FooterLogo = styled.img`
+    height: 6rem;
 `;
 
 export default connect(Footer);

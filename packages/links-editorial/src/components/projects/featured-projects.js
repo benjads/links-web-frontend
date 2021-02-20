@@ -46,9 +46,11 @@ const FeaturedProjects = ({ state, actions, libraries }) => {
                         </Carousel>
                     </Col>
                     <Col lg={7} className="px-5 py-4 py-lg-0">
-                        <h3>{activeProject.title.rendered}</h3>
-                        <libraries.html2react.Component html={activeProject.excerpt.rendered} />
-                        <UnderlineButton dest={activeProject.link} title="View More" />
+                        <ProjectDesc>
+                            <h3 className="pt-1">{activeProject.title.rendered}</h3>
+                            <libraries.html2react.Component html={activeProject.excerpt.rendered} />
+                            <UnderlineButton dest={activeProject.link} title="View More" />
+                        </ProjectDesc>
                         <CarouselControls>
                             <CarouselButton
                                 onClick={actions.theme.decrementFeaturedProjectIndex}
@@ -92,6 +94,17 @@ const CarouselButton = styled(Button)`
     border-radius: 50%;
     margin-right: 1rem;
     background-color: ${(props) => (props.variant === 'light' ? 'white' : 'black')};
+    color: ${(props) => (props.variant === 'light' ? 'black' : 'white')};
+  
+    :hover {
+        background-color: ${(props) => (props.variant === 'light' ? 'black' : 'white')};
+        color: ${(props) => (props.variant === 'light' ? 'white' : 'black')};
+    }
+`;
+
+const ProjectDesc = styled.div`
+    height: 10rem;
+    vertical-align: middle;
 `;
 
 export default connect(FeaturedProjects);

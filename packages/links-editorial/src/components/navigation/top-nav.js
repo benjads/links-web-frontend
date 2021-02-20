@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
-import {
-    Navbar, NavbarBrand,
-} from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import {
     connect, styled, css,
 } from 'frontity';
@@ -10,8 +8,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import OffCanvasNav from './offcanvas-nav';
 import EditorialLink from '../link';
+import linksWhite from '../../static/images/links-white.png';
 
-const TopNav = ({ hide, semiTrans, state, actions }) => {
+const TopNav = ({ hide, state, actions }) => {
     if (hide) {
         useEffect(() => {
             window.addEventListener('scroll', actions.theme.updateNav);
@@ -31,7 +30,7 @@ const TopNav = ({ hide, semiTrans, state, actions }) => {
                 expand={false}
                 fixed="top"
             >
-                <EditorialLink link="/"><LogoBrand className="h2">LINKS</LogoBrand></EditorialLink>
+                <EditorialLink link="/"><LogoBrand src={linksWhite} alt="LINKS Logo" /></EditorialLink>
                 <NavButton
                     id="nav-toggle"
                     type="button"
@@ -77,13 +76,11 @@ const hidden = css`
 `;
 
 const TopNavbar = styled(Navbar)`
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
 `;
 
-const LogoBrand = styled(NavbarBrand)`
-    font-size: 2em;
-    padding: 0;
-    margin-bottom: 0;
+const LogoBrand = styled.img`
+    height: 2rem;
 `;
 
 const NavButton = styled.button`
