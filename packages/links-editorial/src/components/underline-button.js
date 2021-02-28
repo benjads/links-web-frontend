@@ -15,24 +15,42 @@ const CTALink = styled(EditorialLink)`
 `;
 
 const CTAText = styled.span`
-    color: black;
-    text-transform: uppercase;
-    max-width: fit-content;
-    font-size: 0.8rem;
-    display: inline-block;
+  color: black;
+  text-transform: uppercase;
+  max-width: fit-content;
+  font-size: 0.8rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 4px;
+
+  :after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: none repeat scroll 0 0 grey;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    z-index: 1;
+  }
   
-    :after {
-      transition: all ease-in-out .2s;
-      background: none repeat scroll 0 0 black;
-      content: "";
-      display: block;
-      height: 2px;
-      width: 0;
-    }
-  
-    :hover:after {
-      width: 100%;
-    }
+  :before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all ease-in-out .2s;
+    background: none repeat scroll 0 0 black;
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    z-index: 10;
+  }
+
+  :hover:before {
+    width: 100%;
+  }
 `;
 
 export default connect(UnderlineButton);
