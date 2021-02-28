@@ -6,6 +6,7 @@ import Hero from '../hero';
 import JoinUsBreak from '../join-us-break';
 import Footer from '../footer';
 import ProjectList from '../projects/project-list';
+import ourProjectsHeader from '../../static/images/our-projects-header.jpg';
 
 const overviewText = 'We’re a group of individuals who are passionate about serving others. With each act of kindness, we can build a better world.';
 
@@ -14,7 +15,7 @@ const PageProjects = () => (
         <TopNav />
         <Hero
             title="Our Projects"
-            subtitle="Leadership. Networking Kindness. Service."
+            heroImage={ourProjectsHeader}
         />
 
         <section>

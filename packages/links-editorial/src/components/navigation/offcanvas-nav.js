@@ -1,22 +1,17 @@
 import React from 'react';
 import { connect, styled } from 'frontity';
-import { Nav, Navbar, NavbarBrand } from 'react-bootstrap';
-import { fontHeadings, fontSansSerif } from '../../main-vars';
+import { Nav, Navbar } from 'react-bootstrap';
+import { colorSecondaryGray, fontSansSerif } from '../../main-vars';
 import EditorialLink from '../link';
+import linksWhite from '../../static/images/links-white.png';
 
 const OffCanvasNav = () => (
     <OffCanvasNavbar bg="primary" variant="dark" expand={false}>
-        <OffCanvasBrand className="h1">LINKS</OffCanvasBrand>
+        <LogoBrand src={linksWhite} alt="LINKS Logo" />
         <Nav className="mr-auto">
-            <EditorialLink link="/">
-                <StyledLink>Home</StyledLink>
-            </EditorialLink>
-            <EditorialLink link="/our-story/">
-                <StyledLink>Our Story</StyledLink>
-            </EditorialLink>
-            <EditorialLink link="/projects/">
-                <StyledLink>Our Projects</StyledLink>
-            </EditorialLink>
+            <StyledLink link="/">Home</StyledLink>
+            <StyledLink link="/our-story/">Our Story</StyledLink>
+            <StyledLink link="/projects/">Our Projects</StyledLink>
         </Nav>
     </OffCanvasNavbar>
 );
@@ -28,16 +23,21 @@ const OffCanvasNavbar = styled(Navbar)`
     padding-left: 3rem;
 `;
 
-const OffCanvasBrand = styled(NavbarBrand)`
-    margin-right: 0;
-    font-size: 2.5rem;
-    font-family: ${fontHeadings};
+const StyledLink = styled(EditorialLink)`
+    padding-bottom: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-family: ${fontSansSerif};
+  
+    :hover {
+      text-decoration: none;
+      color: ${colorSecondaryGray};
+    }
 `;
 
-const StyledLink = styled.p`
-    color: #fff !important;
-    font-size: 2rem;
-    font-family: ${fontSansSerif};
+const LogoBrand = styled.img`
+    height: 3rem;
+    margin-bottom: 2rem;
 `;
 
 export default connect(OffCanvasNav);

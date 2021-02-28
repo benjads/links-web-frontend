@@ -17,7 +17,7 @@ const SnippetDiv = styled.div`
 
 const PosterImg = styled.img`
     padding-bottom: 1.5rem;
-    border-radius: 20%/20%;
+    border-radius: 15%;
     width: 20rem;
     height: 20rem;
     object-fit: cover;

@@ -76,10 +76,10 @@ const FeaturedProjects = ({ state, actions, libraries }) => {
 
 const ProjectBubble = styled.div`
     background-color: ${colorSecondaryWestar};
+    overflow: hidden;
 
     @media(min-width: 1024px) {
       border-radius: 5% / 15%;
-      overflow: hidden;
     }
 `;
 
@@ -95,8 +95,9 @@ const CarouselButton = styled(Button)`
     margin-right: 1rem;
     background-color: ${(props) => (props.variant === 'light' ? 'white' : 'black')};
     color: ${(props) => (props.variant === 'light' ? 'black' : 'white')};
+    border: none;
   
-    :hover {
+    :hover,:active,:focus {
         background-color: ${(props) => (props.variant === 'light' ? 'black' : 'white')};
         color: ${(props) => (props.variant === 'light' ? 'white' : 'black')};
     }

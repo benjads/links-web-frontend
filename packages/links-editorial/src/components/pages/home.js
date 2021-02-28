@@ -9,20 +9,19 @@ import Footer from '../footer';
 import JoinUsBreak from '../join-us-break';
 import FeaturedProjects from '../projects/featured-projects';
 
-const clubDesc = 'We develop meaningful connections between our club members '
+const clubDesc = 'Developing meaningful connections between our club members '
     + 'and within our communities through '
     + 'Leadership, Innovation, Networking, Kindness, and Service.';
 
-const lipsum = 'As aut explaborit perfera tisciur autem harume cusciendic temporio. '
-    + 'Ecuptis re officiu rionser ferspe plicim ium sum a venisi aut quod.';
+const featuredDesc = 'With each act of kindness, we can build a better world.';
 
-const eventsDesc = 'Explore the good we\'re doing locally and globally and discover our upcoming service, social, and professional development events.';
+const eventsDesc = 'Explore the good we\'re doing locally and globally through our upcoming service, social, and professional development events.';
 
 const PageHome = () => (
     <>
         <TopNav hide />
         <Hero
-            subtitle="Leadership. Innovation. Networking. Kindness. Service."
+            subtitle={'Leadership. Innovation. Networking. Kindness. Service.'}
         />
         <Section
             title="We are LINKS"
@@ -32,8 +31,8 @@ const PageHome = () => (
         />
         <Section
             title="Featured Projects"
-            desc={lipsum}
-            ctaUrl="#"
+            desc={featuredDesc}
+            ctaUrl="/projects"
             ctaText="Explore All Projects"
             bg={colorSecondaryTeak}
         >

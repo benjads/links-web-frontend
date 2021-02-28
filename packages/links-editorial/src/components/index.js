@@ -27,6 +27,7 @@ const ImportedStyles = () => (
 const Theme = ({ state }) => {
     const data = state.source.get(state.router.link);
 
+    // noinspection HtmlRequiredTitleElement
     return (
         <>
             <Title />
@@ -56,7 +57,7 @@ const globalStyles = css`
     .font-ss {
         font-family: ${fontSansSerif};
     }
-  
+
     .font-heading {
         font-family: ${fontHeadings};
     }
